@@ -1,0 +1,73 @@
+Fibo numbers are quite easy in concept, they go like 1, 2, 3, 5, 8, 13, 21, ..., 
+(n-1+n-2), (n+n-1)
+
+==========================Description Of The Problem===========================
+There is a person, x, who took over the world. His war has been won, and he has 
+settled down to his new throne. X, being super rich, has infinitly many coins, 
+where a coin is a unit of money, lined up on podiums. The coins get bigger in 
+size as you walk along the podiums. 
+On the first podium, the coin us worth 1.
+On the second podium, the coin us worth 2.
+On the third podium, the coin us worth 3.
+On the nth podium, the coin us worth the value of the n-1th coin + the value of 
+the n-2th coin.
+
+Another person, Y, comes along and says "I have brought you the elixir of life.
+I will sell it to you for 'V' money."
+
+Person X wants to use his coins to make up the value of V. However, he's weird
+(Slightly mental post war) and wants to do the 2 very specific rules:
+0. He must make the V money's exactly. No more, no less. Person Y has no chnage.
+1. He likes to impress the girls. Girls don't like it when two consecutive 
+podiums are both missing coins. Thus, he cannot take coins from two consecutive
+podiums.
+Write a pogram that gives Y's price of V. 1<=V<=1,000,000,000 , will output some 
+list of the coins (in ascending order) which X can use to pay Y.
+==============================End Of Description===============================
+
+
+========================The First 20 Fibonacci numbers=========================
+[1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,
+ 6765]
+=================================End Of List===================================
+
+==================List Computation For The First 20 V Values===================
+
+==V value==                                      ==List Of Coins==
+
+--> 1											[1]
+--> 2											[2]
+--> 3											[3]
+--> 4											[1, 3]
+--> 5											[4]
+--> 6											[1, 4]
+--> 7											[2, 4]
+--> 8											[5]
+--> 9											[1, 5]
+--> 10											[2, 5]
+--> 11											[3, 5]
+--> 12											[1, 3, 5]
+--> 13											[6]
+--> 14											[1, 6]
+--> 15											[2, 6]
+--> 16											[3, 6]
+--> 17											[1, 3, 6]
+--> 18											[4, 6]
+--> 19											[1, 4, 6]					
+--> 20											[2, 4, 6]
+=================================End Of List===================================
+
+============================Design Of The Solution=============================
+0. Recieve V value from user
+1. Make fibo sequence that goes up to the value of V (i.e the next value is 
+greater)
+2. Make a global var of the list and the length of it
+3. 	WHILE total != v:
+		add the last index to total
+		add the last index to the solutions
+		sequence again
+4. RETURN solutions
+===============================End Of Solution=================================
+
+
+===============================END OF DOCUMENT=================================
